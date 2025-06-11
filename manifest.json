@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Loop Controller",
+  "version": "1.0",
+  "description": "自定義 YouTube 影片的起始與結束時間並循環播放。",
+  "permissions": ["scripting", "tabs"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "host_permissions": ["*://www.youtube.com/*"]
+}

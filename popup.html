@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <title>YouTube 循環播放</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    input {
+      width: 60px;
+      margin-right: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h3>設定循環範圍 (hr:min:sec)</h3>
+
+  <label>起點時間：
+    <input type="number" id="startHr" min="0" placeholder="hr" /> :
+    <input type="number" id="startMin" min="0" max="59" placeholder="min" /> :
+    <input type="number" id="startSec" min="0" max="59" placeholder="sec" />
+  </label>
+  <br /><br />
+  <label>終點時間：
+    <input type="number" id="endHr" min="0" placeholder="hr" /> :
+    <input type="number" id="endMin" min="0" max="59" placeholder="min" /> :
+    <input type="number" id="endSec" min="0" max="59" placeholder="sec" />
+  </label>
+  <br /><br />
+  <button id="setLoopBtn">套用循環</button>
+  <p id="statusMsg"></p>
+
+  <script src="popup.js"></script>
+</body>
+</html>
